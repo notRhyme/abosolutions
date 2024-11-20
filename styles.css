@@ -1,0 +1,473 @@
+/*Targets all elements on the page and resets default browser style 
+for consistent spacing across browsers*/
+
+/* Color scheme change to olive green, white and torquise */
+/*  */
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+
+
+body{
+    font-family : Arial, sans-serif;
+    background-color : #f3f3f3;
+    color: #333;
+    background-color : #ffffff;
+}
+
+.briefOverview{
+    padding : 20px; margin-top : 70px; 
+    background: linear-gradient(90deg, rgb(32, 1, 105), rgb(62, 87, 14));
+    
+    background-color: rgb(20, 8, 48);
+}
+
+.briefOverview h1{
+    color : white; font-family : 'Lato', Arial, sans-serif;font-size : 35px; line-height : 1.5; letter-spacing : 1px;
+}
+.maininfo{
+    display : flex; 
+    align-items : center;
+    font-size : 25px;
+    font-family :'Lato', Geneva, Tahoma, sans-serif;
+    font-weight : 300;
+    line-height : 1.7;
+}
+.maininfo img{
+    height : auto;
+    margin-right : 20px;
+    padding-right : 50px;
+}
+h1{
+    color : rgb(20, 8, 48);
+    font-size: 30px;
+    text-align : center;
+}
+main.shifted{
+    margin-top:210px;
+}
+
+.nav-links{
+    display : flex; 
+    margin-left : auto;
+    font-size : 20px;
+}
+
+.navbar{
+    position : fixed; /*Keeps the navbar at the top of the page even when scrolling down*/
+    top : 0;
+    height : 70px;
+    width : 100%;
+    display : flex; 
+    justify-content : space-between;
+    align-items : center;/* vertically centers element on the Y axis*/ 
+    padding : 10px 20px;
+    background-color : rgb(244, 244, 244); 
+    border-bottom : 1px solid #ccc; 
+    border-bottom-left-radius : 5px;
+    border-bottom-right-radius : 5px;
+    z-index: 1000; 
+}
+
+/* Logo and Text Section */
+.logo{
+    display : flex; 
+    align-items : center; 
+}
+
+.logo img{
+    height : 60px;
+    margin-right : 10px; 
+    padding : 0;
+    border-radius : 10px;
+}
+
+.logo span{
+    display : flex; 
+    font-weight : 700px;
+    line-height : 1.5;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, rgb(5, 0, 91), rgb(3, 201, 198)); 
+    background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    letter-spacing : 2px;
+    
+}
+
+#abo{
+    font-size : 35px;
+    font-family : 'Lato', Helvetica, sans-serif;
+    padding-right : 8px;
+    font-weight : 1000;
+}
+#solutions{
+    font-size : 35px;
+    font-family : 'Lato', Helvetica, sans-serif;
+    font-weight : 1000;
+    color : rgb(20, 8, 48);
+}
+
+/* Navigation links section */
+.nav-links{
+    display : flex; 
+    gap: 15px;
+}
+
+.nav-links a{
+    text-decoration : none; /* Removes the default underline from links*/
+    color : rgb(76, 19, 76);
+    font-weight : 500;
+    transition : color 0.3s ease; /*Smoothly changes the color on hover*/
+}
+
+.nav-links a:hover{
+    color : #9c27b0;
+}
+
+/* Mobile menu option hidden by default and display only on smaller devices*/
+.mobile-menu {
+    display : none; 
+    position : fixed;
+    top : 60px;
+    right: 0;
+    background-color : white; 
+    width : 100%;
+    flex-direction : column; 
+    box-shadow : 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index : 999;
+}
+
+.mobile-menu a{
+    padding : 15px 20px;
+    text-align : center; 
+    text-decoration : none; 
+    color : rgb(76, 19, 76);
+    width : 100%;
+    display : block;
+    border-bottom : 1px solid #eee; 
+    font-size : 20px;
+}
+
+footer{
+    font-family: 'Advent Pro', Helvetica, sans-serif;
+    font-weight : 600;
+}
+main{
+    margin : 60px auto; 
+    margin-top : 20px;
+    padding : 20px; 
+    max-width : 1300px; 
+    width : 90%;
+    border-radius : 8px;
+    box-shadow : 0px 4px 6px rgba(0, 0, 0, 0.1);
+    line-height : 2;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size : 20px;
+}
+
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: rgb(76, 19, 76);
+    cursor: pointer;
+}
+.nav-links a{
+    font-family : 'Lato', Arial, Helvetica;
+}
+
+
+/* Adjust positioning of the menu button */
+
+
+
+/* Responsive Design */
+@media screen and (max-width : 900px){
+    .maininfo{
+        display : inline-block;
+        line-height : 1.6;
+        font-size: 24px;
+    }
+
+    .maininfo img{
+        height : auto;
+        width : auto;
+        padding : 0;
+        margin-left : auto;
+        margin-right : auto;
+        margin-bottom : 20px;
+        display : block;
+    }
+}
+
+@media screen and (max-width : 899px){
+    .nav-links {
+        display : none !important; /*Hide the navigation bar on small screens*/
+    }
+
+    .maininfo{
+        display : inline-block;
+    }
+
+    .maininfo img{
+        height : auto;
+        width : auto;
+        margin-left : auto;
+        margin-right : auto;
+        display : block;
+    }
+    main.shifted{
+        margin-top: 150px;
+        transition: margin-top 0.35s ease;
+    }
+    .menu-button{
+        display: flex;
+        cursor : pointer;
+        left : 0px;
+
+    }
+    .menu-button::before{
+        content: "☰";
+        font-size : 45px;
+    }
+
+    .logo{
+        position: absolute;
+        left: 50%; /* Move to the middle of the navbar */
+        transform: translateX(-50%); /* Offset by half its own width for true centering */
+        display: flex;
+        align-items: center; /* Vertically align image and text */
+        gap: 10px;
+        transition : left 0.2s ease;
+    }
+    .logo img{
+        height : 40px;
+        margin-right : 1px; 
+        margin-left : 10px;
+        border-radius : 5px;
+    }
+
+    .logo span{
+        display : flex; 
+        font-size : 20px;
+        font-weight : 550px;
+        line-height : 1.45;
+    }
+
+    #abo{
+        font-family : Helvetica, sans-serif;
+        font-size : 28px;
+        font-weight : bolder;
+        padding-right : 7px;
+    }
+    
+    #solutions{
+        font-size : 28px;
+        font-family : Helvetica, sans-serif;
+        font-weight : bolder;
+    }
+    
+    .menu-button.active::before{
+        content : "✖";
+        font-size : 50px;
+    }
+    .mobile-menu{
+        display: none; 
+    }
+    .mobile-menu.active{
+        display: flex; 
+        margin-top : 5px;
+    }
+    h1{
+        font-size : 20px;
+    }
+
+    .mainclass{
+        width : 97%;
+        transition: margin-top 0.2s ease;
+    }
+}
+
+
+@media screen and (max-width : 768px){
+    .nav-links {
+        display : none !important; /*Hide the navigation bar on small screens*/
+    }
+
+    .briefOverview{
+        padding : 0;
+    }
+
+    .briefOverview h1{
+        color : white; font-family : 'Lato', Arial, sans-serif;font-size : 28px; line-height : 1.5;
+    }
+
+    main.shifted{
+        margin-top: 100px;
+        transition: margin-top 0.35s ease;
+    }
+    .menu-button{
+        display: flex;
+        cursor : pointer;
+        left : 0px;
+
+    }
+    .menu-button::before{
+        content: "☰";
+        font-size : 35px;
+    }
+
+    .logo{
+        position: absolute;
+        left: 50%; /* Move to the middle of the navbar */
+        transform: translateX(-50%); /* Offset by half its own width for true centering */
+        display: flex;
+        align-items: center; /* Vertically align image and text */
+        gap: 10px;
+        transition : left 0.2s ease;
+    }
+    .logo img{
+        height : 35px;
+        margin-right : 1px; 
+        margin-left : 10px;
+        border-radius : 5px;
+    }
+
+    .logo span{
+        display : flex; 
+        font-size : 20px;
+        font-weight : 550px;
+        line-height : 1.45;
+    }
+
+    #abo{
+        font-family : Helvetica, sans-serif;
+        font-size : 27px;
+        font-weight : bolder;
+        padding-right : 7px;
+    }
+    
+    #solutions{
+        font-size : 27px;
+        font-family : Helvetica, sans-serif;
+        font-weight : bolder;
+    }
+    
+    .menu-button.active::before{
+        content : "✖";
+        font-size : 35px;
+    }
+    .mobile-menu{
+        display: none; 
+    }
+    .mobile-menu.active{
+        display: flex; 
+        margin-top : 5px;
+    }
+    h1{
+        font-size : 20px;
+    }
+
+    .mainclass{
+        width : 97%;
+        transition: margin-top 0.2s ease;
+    }
+}
+
+@media screen and (max-width : 420px){
+    .nav-links {
+        display : none !important; /*Hide the navigation bar on small screens*/
+    }
+
+    .briefOverview{
+        padding : 0;
+    }
+
+    .briefOverview h1{
+        color : white; font-family : 'Lato', Arial, sans-serif;font-size : 26px; line-height : 1.4;
+    }
+
+    main.shifted{
+        margin-top: 100px;
+        transition: margin-top 0.35s ease;
+    }
+    .menu-button{
+        display: flex;
+        cursor : pointer;
+        left : 0px;
+
+    }
+    .menu-button::before{
+        content: "☰";
+        font-size : 35px;
+    }
+
+    .logo{
+        position: absolute;
+        left: 50%; /* Move to the middle of the navbar */
+        transform: translateX(-50%); /* Offset by half its own width for true centering */
+        display: flex;
+        align-items: center; /* Vertically align image and text */
+        gap: 10px;
+        transition : left 0.2s ease;
+    }
+    .logo img{
+        height : 35px;
+        margin-right : 1px; 
+        margin-left : 10px;
+        border-radius : 5px;
+    }
+
+    .logo span{
+        display : flex; 
+        font-size : 20px;
+        font-weight : 550px;
+        line-height : 1.45;
+    }
+
+    #abo{
+        font-family : Helvetica, sans-serif;
+        font-size : 23px;
+        font-weight : bolder;
+        padding-right : 7px;
+    }
+    
+    #solutions{
+        font-size : 23px;
+        font-family : Helvetica, sans-serif;
+        font-weight : bolder;
+    }
+    
+    .menu-button.active::before{
+        content : "✖";
+        font-size : 35px;
+    }
+    .mobile-menu{
+        display: none; 
+    }
+    .mobile-menu.active{
+        display: flex; 
+        margin-top : 5px;
+    }
+    h1{
+        font-size : 20px;
+    }
+
+    .mainclass{
+        width : 97%;
+        transition: margin-top 0.2s ease;
+    }
+}
+
+
+.pitch img{
+    width : 90%;
+    border-radius : 10000px;
+    height : 20%;
+}
